@@ -2293,22 +2293,26 @@
 }
 
 :root .container_fd6364 .clickable_fd6364 {
-    border-radius: var(--border-radius)
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;)
 }
 
 :root .panel_bf1a22 activityPanel_a4d4d9 {
-    border-radius: var(--border-radius)
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 :root .container_ee69e0 {
-    border-radius: var(--border-radius)
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;)
 }
 
 :root .sidebar_a4d4d9 {
-    border-radius: var(--border-radius)
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 :root .guilds_a4d4d9 {
-    border-top-left-radius: 20px
-    border-bottom-left-radius: 20px
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }

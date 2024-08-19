@@ -1098,7 +1098,7 @@
 
 @media(min-width: 1350px) {
 	:root .standardSidebarView_c25c6d {
-		border-radius: 0 var(--border-radius) var(--border-radius) 0;
+		border-radius: var(--border-radius) var(--border-radius) var(--border-radius) var(--border-radius);
 		overflow: hidden
 	}
 }
@@ -2323,6 +2323,11 @@
 }
 
 :root .content_a4d4d9 {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+:root .sidebarRegion_c25c6d {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }

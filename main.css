@@ -2291,3 +2291,11 @@
 :root .scroller_c43953 .thin_eed6a8 .scrollerBase_eed6a8 .fade_eed6a8 .customTheme_eed6a8 {
     border-radius: var(--border-radius)
 }
+
+:root .container_fd6364 .clickable_fd6364 {
+    border-radius: var(--border-radius)
+}
+
+:root .panel_bf1a22 activityPanel_a4d4d9 {
+    border-radius: var(--border-radius)
+}

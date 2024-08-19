@@ -2308,6 +2308,7 @@
     border-radius: var(--border-radius)
 }
 
-:root .content_eed6a8 {
-    border-radius: var(--border-radius)
+:root .guilds_a4d4d9 {
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
 }

@@ -2299,3 +2299,7 @@
 :root .panel_bf1a22 activityPanel_a4d4d9 {
     border-radius: var(--border-radius)
 }
+
+:root .container_ee69e0 {
+    border-radius: var(--border-radius)
+}

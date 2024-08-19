@@ -2270,3 +2270,8 @@
 		background-color: var(--background-primary)
 	}
 }
+
+:root .guilds_a4d4d9, 
+:root .guilds_a4d4d9 > ul {
+    border-radius: var(--border-radius);
+}

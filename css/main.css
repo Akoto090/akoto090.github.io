@@ -1,12 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 
-html, body {
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+  
+    /*========== Colors ==========*/
+    --first-color: hsl(14, 98%, 50%);
+    --black-color: hsl(0, 0%, 0%);
+    --black-color-light: hsl(0, 0%, 40%);
+    --white-color: hsl(0, 0%, 95%);
+    --title-color: hsl(0, 0%, 0%);
+    --text-color-light: hsl(0, 0%, 64%);
+    --container-color: hsl(0, 0%, 83%);
+    
+    --text-color: #EBE9FC;
+    --header-color: #010104;
+}
+
+html, .body {
     height: 100%;
-    margin: 0;
     font-family: "Roboto Mono";
-    background-color: #1a202c;
-    color: #cbd5e0;
+    background-color: var(--header-color);
 }
 
 * {
@@ -19,28 +34,13 @@ body {
 }
 
 header, nav, section, footer {
-    margin: 20px;
-    padding: 10px;
+    margin: 0px;
+    padding: 0px;
     font-family: "Roboto Mono";
 }
 
 main {
     flex: 1;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #cbd5e0; /* Dark mode text color */
 }
 
 .coverflow {
@@ -67,3 +67,68 @@ footer {
     color: #cbd5e0; /* Ensure footer text color matches the body */
 }
 
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--header-color);
+    z-index: var(--z-fixed);
+    transition: box-shadow .4s;
+}
+
+.nav{
+    position: relative;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+}
+
+.nav > * {
+    padding: 10px;
+    align-items: center;
+    font-size: 14px;
+}
+
+
+.nav__logo {
+    display: flex;
+    column-gap: 5rem;
+    align-items: center; 
+    font-family: "Roboto Mono";
+    color: var(--title-color);
+}
+
+.nav__logo-circle, .nav__toggle {
+    width: 32px;
+    height: 32px;
+    background-color: var(--black-color);
+    color: var(white-color);
+    display: grid;
+    place-items: center;
+}
+
+.nav__logo-name {
+    font-family: "Roboto Mono";
+}
+
+.nav__list {
+    display: flex; /* Change to flex to make the nav bar horizontal */
+    list-style: none; /* Remove default list styling */
+}
+
+.nav__item {
+    margin-right: 20px; /* Adjust spacing between nav items */
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 10px;
+}
+
+.nav__logo-name {
+    color: var(--text-color);
+}

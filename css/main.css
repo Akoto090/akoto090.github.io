@@ -369,3 +369,20 @@ line-height: 1.5rem;
 .video {
     transform: translateX(-110px) translatey(20px) rotate(-20deg); /* Adjust the values as needed */
 }
+
+/* Add this CSS animation for the "text-animation" class */
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text-animation {
+    opacity: 0; /* Initially hide the text */
+    animation: textFadeIn 1s ease-in-out 2s forwards;
+}

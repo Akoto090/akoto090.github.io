@@ -282,6 +282,11 @@ header, nav, section, footer {
     max-width: 48rem;
 }
 
+.max-width-short {
+    width: 100%;
+    max-width: 20rem;
+}
+
 .padding-bottom .padding-small {
     padding-top: 0;
     padding-bottom: 1rem;
@@ -359,4 +364,8 @@ line-height: 1.5rem;
 
 .padding-large {
     padding: 3rem;
+}
+
+.video {
+    transform: translateX(-110px) translatey(20px) rotate(-20deg); /* Adjust the values as needed */
 }

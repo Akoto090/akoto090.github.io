@@ -11,62 +11,78 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
 </head>
 
-<body class="body"> <!-- Updated classes -->
+<body class="body">
     
     <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">
-                <span class="nav__logo--circle"></span>
-                <span class="nav__logo-name">Akoto's Portfolio</span>
-            </a>
+        <div class= "nav-page-padding">
+            <div class="nav-container">
 
-            <div class="nav__menu" id="nav-menu">
-                <span class="nav__title">Menu</span> <!-- Corrected class name -->
+                <!--<a href="/" aria-current="page" class="nav_brand-link w-nav-brand w--current" aria-label="home">
+                    <img src="https://cdn.prod.website-files.com/61ba3b439a672312697272c7/61cda0747d74a77a3f87b6d2_motion-logo.svg" loading="lazy" alt="Motion logo in nav" class="motion-logo">
+                </a>-->
 
-                <h3 class="nav__name">Akoto</h3>
+                <nav role="navigation" class="nav_menu w-nav-menu">
+                    
+                    <div class="nav_left-wrapper">
+                        
+                        <div class="nav_link-wrapper">
+                            <a href="#" class="nav_link w-nav-link">Akoto's Portfolio</a>
+                            <div class="nav_link-line"></div>
+                        </div>
+                        
+                        <!--<div class="nav_link-wrapper">
+                            <a href="#projects" class="nav_link w-nav-link">Projects</a>
+                            <div class="nav_link-line"></div>
+                        </div>
+                        
+                        <div class="nav_link-wrapper">
+                            <a href="#contact" class="nav_link w-nav-link">Contact Me</a>
+                            <div class="nav_link-line"></div>
+                        </div>-->
 
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="motion.html" class="nav__link"></a>
-                    </li>
+                    </div>
 
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">About Me</a>
-                    </li>
+                    <div class="nav_right-wrapper">
 
-                    <li class="nav__item">
-                        <a href="#projects" class="nav__link">Projects</a>
-                    </li>
+                        <div class="nav_link-wrapper">
+                            <a href="#about" class="nav_link w-nav-link">About Me</a>
+                            <div class="nav_link-line"></div>
+                        </div>
 
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">Contact Me</a>
-                    </li>
-                </ul>
+                        <div class="nav_link-wrapper">
+                            <a href="#project" class="nav_link w-nav-link">Projects</a>
+                            <div class="nav_link-line"></div>
+                        </div>
 
-                <div class="nav__close" id="nav-close">
-                    <i class="ri-close-line"></i>
-                </div>
+                        <div class="nav_link-wrapper">
+                            <a href="#contact" class="nav_link w-nav-link button_contact-me">Contact Me</a>
+                            <div class="nav_link-line"></div>
+                        </div>
+                        
 
-                <div class="nav__buttons">
+                    </div>
 
-                    <i class="ri-menu-4-line"></i>
-                </div>
+
+                </nav>
+
             </div>
-        </nav>
+
+        </div>
+        <div class="padding-bottom padding-xhuge"></div>
+        <div class="test">Hey</div>
     </header>
 
 
     <main>
         <section id="projects" class="p-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                
+               
             </div>
         </section>
     </main>
-    <footer class="bg-blue-500 text-white text-center py-2">
+    <footer class="footer">
         <p>© 2024 Game Developer Portfolio</p>
     </footer>
-    <script src="your-script.js"></script>
 
 </body>
 </html>

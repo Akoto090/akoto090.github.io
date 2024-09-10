@@ -16,119 +16,224 @@
     
     --text-color: #EBE9FC;
     --header-color: #010104;
+    --button-color: #3F0E47;
 }
 
+/*=============== BODY ===============*/
 html, .body {
     height: 100%;
     font-family: "Roboto Mono";
     background-color: var(--header-color);
 }
 
-* {
-    font-family: "Roboto Mono";
+body {
+    background-color: var(--header-color);
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 1.5rem;
+    min-height: 100%;
+    margin: 0;
+    display: block;
 }
 
-body {
+/*========== Header ==========*/
+
+* {
+    box-sizing: border-box;
+}
+.header {
+    display: block;
+}
+
+/*========== nav ==========*/
+.nav-page-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.nav-container {
+    height: 56px; /* Set the height of the nav bar to 56px */
+    width: 100%; /* Set the width of the nav bar to 100% */
+    max-width: 1380px; /* Set the maximum width of the nav bar to 1380px */
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
-    flex-direction: column;
+    position: relative;
+}
+
+.nav_brand-link.w--current {
+    margin-right: 20px;
+}
+
+.nav_menu {
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.w-nav-menu {
+    float: right;
+    position: relative;
+}
+
+.nav_left-wrapper {
+    margin-top: .5rem;
+    display: flex;
+}
+
+.nav_link-wrapper {
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.nav_link {
+    color: var(--text-color);
+    padding: 12px 0;
+    font-family: Roboto Mono;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.w-nav-link {
+    vertical-align: top;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    position: relative;
+}
+
+.nav_link-line {
+    background-color: var(--button-color);
+    width: 0%;
+    height: .125rem;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all .2s;
+    position: absolute;
+    inset: auto 0% 0%;
+}
+
+.nav_right-wrapper {
+    align-items: flex-end;
+    margin-top: .5rem;
+    display: flex;
+}
+
+.w-inline-block {
+    max-width: 100%;
+    display: inline-block;
+}
+
+/*=============== main ===============*/
+
+/*========== footer ==========*/
+.footer {
+    height: 56px; /* Set the height of the footer to match the nav bar */
+    width: 100%; /* Set the width of the footer to 100% */
+    max-width: 1380px; /* Set the maximum width of the footer to 1380px */
+    position: fixed;
+    left: 50%; /* Centering the footer horizontally */
+    transform: translateX(-50%); /* Centering the footer horizontally */
+    bottom: 0;
+    text-align: center;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    padding: 10px 30px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 16px;
 }
 
 header, nav, section, footer {
-    margin: 0px;
+    display: flex;
+    margin: 10px;
     padding: 0px;
     font-family: "Roboto Mono";
 }
 
-main {
-    flex: 1;
+.padding-bottom {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-.coverflow {
-    display: flex;
-    overflow-x: auto;
+.padding-xhuge {
+    padding: 8rem;
 }
 
-.project {
-    margin: 10px;
+/*=============== weird button ===============*/
+.button_contact-me {
+    padding: 10px 30px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: .375rem;
 }
 
-.project img {
-    width: 200px;
-    height: 150px;
-    border: 1px solid #ccc;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    border-top: 1px solid #ccc;
-    background-color: #1a202c; /* Ensure footer background matches the body */
-    color: #cbd5e0; /* Ensure footer text color matches the body */
-}
-
-.header {
-    position: fixed;
+.button_contact-me::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
     width: 100%;
-    top: 0;
+    height: 100%;
+    background-color: #3F0E47;
     left: 0;
-    background-color: var(--header-color);
-    z-index: var(--z-fixed);
-    transition: box-shadow .4s;
+    top: 0;
+    border-radius: 10px;
+
 }
 
-.nav{
-    position: relative;
-    height: var(--header-height);
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    align-items: center;
-}
+.button_contact-me::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #FF0000, #FF7300, #FFFB00, #48FF00,
+      #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+  }
+  
+  @keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+  }
 
-.nav > * {
-    padding: 10px;
-    align-items: center;
-    font-size: 14px;
-}
-
-
-.nav__logo {
-    display: flex;
-    column-gap: 5rem;
-    align-items: center; 
-    font-family: "Roboto Mono";
-    color: var(--title-color);
-}
-
-.nav__logo-circle, .nav__toggle {
-    width: 32px;
-    height: 32px;
-    background-color: var(--black-color);
-    color: var(white-color);
-    display: grid;
-    place-items: center;
-}
-
-.nav__logo-name {
-    font-family: "Roboto Mono";
-}
-
-.nav__list {
-    display: flex; /* Change to flex to make the nav bar horizontal */
-    list-style: none; /* Remove default list styling */
-}
-
-.nav__item {
-    margin-right: 20px; /* Adjust spacing between nav items */
-}
-
-.nav__link {
-    text-decoration: none;
-    color: var(--text-color);
-    padding: 10px;
-}
-
-.nav__logo-name {
-    color: var(--text-color);
-}
+  .button_contact-me:hover::before {
+    opacity: 1;
+  }
+  
+  .button_contact-me:active:after {
+    background: transparent;
+  }
+  
+  .button_contact-me:active {
+    color: #000;
+    font-weight: bold;
+  }

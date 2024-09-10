@@ -16,7 +16,8 @@
     
     --text-color: #EBE9FC;
     --header-color: #010104;
-    --button-color: #3F0E47;
+    --button-color: #020024;
+    --primary-color: #3A31D8;
 }
 
 /*=============== BODY ===============*/
@@ -191,7 +192,7 @@ header, nav, section, footer {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #3F0E47;
+    background-color: var(--button-color);
     left: 0;
     top: 0;
     border-radius: 10px;
@@ -237,3 +238,125 @@ header, nav, section, footer {
     color: #000;
     font-weight: bold;
   }
+
+
+.heading-xlarge {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: Roboto Mono;
+    font-weight: 600;
+    font-size: 4.25rem;
+    color: var(--text-color);
+    text-align: center;
+    line-height: 5rem;
+}
+
+.heading-xnormal {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: Roboto Mono;
+    font-weight: 600;
+    font-size: 2.25rem;
+    color: var(--text-color);
+    text-align: center;
+    line-height: 5rem;
+}
+
+.text-size-medium {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    letter-spacing: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    font-family: Roboto Mono;
+    font-weight: 400;
+    line-height: 2.125rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.text-size-medium .max-width-large {
+    width: 100%;
+    max-width: 48rem;
+}
+
+.padding-bottom .padding-small {
+    padding-top: 0;
+    padding-bottom: 1rem;
+}
+
+.padding-bottom .padding-xhuge {
+    padding: 8rem;
+}
+
+.padding-bottom {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.main-wrapper {
+color: var(--text-color);
+font-family: Roboto Mono;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5rem;
+}
+
+.section_home-header {
+    background-color: var(--header-color);
+    flex-direction: row;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: center;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: auto;
+    margin-top: 0;
+    display: block;
+    position: static;
+}
+
+.padding-global {
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+}
+
+.align-center {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.containter-large-new {
+    width: 100%;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-align-center {
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.home-header-component {
+    z-index: 0;
+    min-height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    position: relative;
+}
+
+.padding-large {
+    padding: 3rem;
+}

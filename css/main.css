@@ -580,7 +580,7 @@ text-align: center;
     display: flex;
 }
 
-.box-boxing img {
+.box-boxing .img-cozy {
     margin: 0 auto;
     margin-top: 15px;
 }
@@ -593,4 +593,87 @@ text-align: center;
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/*========== Sllideshow ==========*/
+
+.prev, .next {
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 3.25rem;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    margin-top: 2rem;
+    padding-left: 1.625rem;
+    padding-right: 1.625rem;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 12px;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.sliceclicks {
+    display: flex;
+}
+
+.boxing5 {
+    background-color: var(--accent-color);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: left;
+    width: 20%;
+    font-family: Inter;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.boxing6 {
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: left;
+    width: 80%;
+    font-family: Inter;
+    margin-left: 15px;
+    margin-top: 15px;
 }

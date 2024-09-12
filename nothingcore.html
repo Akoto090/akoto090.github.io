@@ -125,30 +125,53 @@
                             <div class="boxing4">
                                 <div class="tooltip">
                                     <a href="">
-                                    <img title="Not available" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/curseforge_vector.svg">
+                                    <img class="img-cozy" title="Not available" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/curseforge_vector.svg">
                                     </a>    
                                     <a href="">
-                                    <img title="Not available" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/modrinth_vector.svg">
+                                    <img class="img-cozy" title="Not available" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/modrinth_vector.svg">
                                     </a>
                                     <a href="https://github.com/Akoto090/Nothing-Core">
-                                    <img  title="Github" alt="github" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/github_vector.svg">
+                                    <img class="img-cozy" title="Github" alt="github" height="56" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy-minimal/available/github_vector.svg">
                                     </a>
                             </div>
                                 <div class="padding-bottom padding-small"></div>
                             </div>
                             <div class="boxing3">
+                                <div class="slideshow-container">
+                                <div class="mySlides fade">
                                 <h1 class="heading-xsmall width-more">Custom Pebbles</h1>
                                 <div class="padding-bottom padding-small"></div>
                                 <video id="pebblevid" class="pebblevid" width="1300" controls muted> <source src="embedvid.mp4" type="video/mp4" />
-
                                 </video>
+                                </div>
+                                <div class="mySlides fade">
+                                    <h1 class="heading-xsmall width-more">Custom Ore generation</h1>
+                                    <div class="padding-bottom padding-small"></div>
+                                    <img src="nothing-pack-carsuel.png" alt="">
+                                </div>
+                                <div class="mySlides fade">
+                                    <h1 class="heading-xsmall width-more">Custom Data-Pack Recipes</h1>
+                                    <div class="padding-bottom padding-small"></div>
+                                    <img src="customrecipes.png" alt="">
+                                </div>
+                                </div>
+                               
+                                <div class="sliceclicks">
+                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
                             </div>
                             </div>
+                            </div>
+                            
+                            
                         </div>
                             
 
 
                             <div class="padding-bottom padding-xhuge"></div>
+
+
+                            
                         </div>
 
                     </div>
@@ -167,8 +190,35 @@
     </footer>
 
     <div class="padding-bottom padding-small"></div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
 
-<script>
-</script>
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+    </script>
 </body>
 </html>

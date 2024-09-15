@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=""viewport content=""width=device-with,
+    initial-scale="1.0">
+    <title>New Tab</title>
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head> 
+<body style="background: url('search/WinHin-Va11Halla.png') no-repeat center center fixed; background-size: cover;">
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+            document.body.style.opacity = 1;
+            });
+        </script>
+    <div class="containers">
+        <div class="container">
+            <a href="https://youtube.com">
+                <div class="box">
+                    <img src="search/revanced.png">
+                </div>
+            </a>
+            <a href="https://twitch.tv">
+                <div class="box"><img src="search/bttv.png" alt="Image description"></div>
+            </a>
+            <a href="https://bsky.app/">
+                <div class="box"><img src="search/bluesky.png" alt="Image description"></div>
+            </a>
+            <a href="https://www.instagram.com/">
+                <div class="box"><img src="search/instagram.png" alt="Image description"></div>
+            </a>
+            <a href="https://www.deviantart.com/">
+                <div class="box"><img src="search/deviantart.png" alt="Image description"></div>
+            </a>
+            <a href="https://safereddit.com/">
+                <div class="box"><img src="search/redlib.png" alt="Image description"></div>
+            </a>
+    </div>
+    <!-- Second row of boxes -->
+    <div class="container">
+        <a href="https://u.gg/">
+            <div class="box"><img src="search/ugg.png" alt="Image description"></div>
+        </a>
+        <a href="https://lolalytics.com/">
+            <div class="box"><img src="search/lolalytics.png"Image description"></div>
+        </a>
+        <a href="https://www.curseforge.com/minecraft">
+            <div class="box"><img src="search/cf.png" alt="Image description"></div>
+        </a>
+        <a href="https://www.deepl.com/de/translator">
+            <div class="box"><img src="search/deepl.png" alt="Image description"></div>
+        </a>
+        <a href="https://chat.openai.com/">
+            <div class="box"><img src="search/chatgpt.png" alt="Image description"></div>
+        </a>
+        <a href="https://mail.proton.me/u/0/inbox">
+            <div class="box"><img src="search/proton.png" alt="Image description"></div>
+        </a>
+
+    </div>
+    <div class="container">
+        <a href="https://github.com/Akoto090?tab=repositories">
+            <div class="box"><img src="search/githubmark.png" alt="Image description"></div>
+        </a>
+    </div>
+    <div class="clock" id="clock"></div>
+
+<script>
+    function displayTime() {
+        var date = new Date();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var time = hours + ':' + (minutes < 10 ? '0' : '') + minutes;
+        document.getElementById('clock').textContent = time;
+    }
+    displayTime();
+    setInterval(displayTime, 1000);
+</script>
+    <script>
+        const boxes = document.querySelectorAll('.box');
+        boxes.forEach(box => {
+            box.addEventListener('mouseover', (event) => {
+                const currentAnchor = event.target.closest('.box').parentElement;
+                const prevAnchor = currentAnchor.previousElementSibling;
+                const nextAnchor = currentAnchor.nextElementSibling;
+
+                const prevPrevAnchor = prevAnchor ? prevAnchor.previousElementSibling : null;
+                const nextNextAnchor = nextAnchor ? nextAnchor.nextElementSibling : null;
+
+                event.target.closest('.box').classList.add('hovered');
+
+                if (prevPrevAnchor) {
+                    prevPrevAnchor.children[0].classList.add('prev2');
+                }
+                if (prevAnchor) {
+                    prevAnchor.children[0].classList.add('prev1');
+                }
+                if (nextAnchor) {
+                    nextAnchor.children[0].classList.add('next1');
+                }
+                if (nextNextAnchor) {
+                    nextNextAnchor.children[0].classList.add('next2');
+                }
+            });
+
+            box.addEventListener('mouseout', (event) => {
+                const boxesToReset = document.querySelectorAll('.container .box');
+                boxesToReset.forEach(box => box.classList.remove('next1', 'next2', 'prev1', 'prev2', 'hovered'));
+            });
+        });
+    </script>
+</body>
+</html>

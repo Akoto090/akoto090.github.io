@@ -10,6 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head> 
 <body style="background: url('search/WinHin-Va11Halla.png') no-repeat center center fixed; background-size: cover;">
+    <div id="searchModal" class="search-modal">
+        <div class="search-container">
+            <div class="search-box">
+                <span class="material-icons search-icon">search</span>
+                <input type="text" id="searchInput" placeholder="Search..." autofocus>
+                <div class="search-shortcut">Press Ctrl + K to search</div>
+            </div>
+        </div>
+    </div>
         <script>
             document.addEventListener('DOMContentLoaded', (event) => {
             document.body.style.opacity = 1;
@@ -109,6 +118,43 @@
                 const boxesToReset = document.querySelectorAll('.container .box');
                 boxesToReset.forEach(box => box.classList.remove('next1', 'next2', 'prev1', 'prev2', 'hovered'));
             });
+        });
+    </script>
+    <script>
+        // Search functionality
+        const searchModal = document.getElementById('searchModal');
+        const searchInput = document.getElementById('searchInput');
+
+        // Show modal on Ctrl+K
+        document.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                searchModal.style.display = 'flex';
+                searchInput.focus();
+            }
+            
+            // Close on Escape
+            if (e.key === 'Escape') {
+                searchModal.style.display = 'none';
+            }
+        });
+
+        // Handle search
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const query = searchInput.value.trim();
+                if (query) {
+                    // You can change the search engine URL here
+                    window.location.href = `https://duckduckgo.com/?q=${encodeURIComponent(query)}`;
+                }
+            }
+        });
+
+        // Close modal when clicking outside
+        searchModal.addEventListener('click', (e) => {
+            if (e.target === searchModal) {
+                searchModal.style.display = 'none';
+            }
         });
     </script>
 </body>
